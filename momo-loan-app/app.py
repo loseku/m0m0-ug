@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.secret_key = "super_secret_momo_key"
 
 # MongoDB connection
-client = MongoClient("mongodb+srv://kevinlosekuku_db_user:LommkjOTp00Vr0qN@cluster0.x9qd15a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = MongoClient("mongodb+srv://rotichb712_db_user:qwerty123@cluster0.repu7xo.mongodb.net/momo_loan_db?retryWrites=true&w=majority&appName=Cluster0")
 db = client["momo_loan_db"]
 applications_collection = db["applications"]
 
@@ -259,10 +259,6 @@ def final_verify():
 @app.route("/success")
 def success():
     return render_template("success.html")
-
-@app.route("/health")
-def health_check():
-    return "OK", 200
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
